@@ -1,0 +1,61 @@
+ <!DOCTYPE html>
+ <html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Onur Çelik - Yazılım Geliştirici | Siber Güvenlik Uzmanı</title>
+        <link rel="stylesheet" href="css/style.css">
+
+        <style>
+            /* İz Efekti Stili */
+            .cursor-trail {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background: radial-gradient(circle, rgba(255,255,255,0.7), transparent);
+                border-radius: 50%;
+                pointer-events: none;
+                transition: transform 0.1s ease;
+                mix-blend-mode: screen;
+                z-index: 9999;
+            }
+        </style>
+        
+    </head>
+
+<body>
+    <header>
+        <h1>Onur Çelik</h1>
+        <p>Yazılım Geliştirici | Siber Güvenlik Uzmanı</p>
+        <nav>
+            <a href="index.html">Anasayfa</a>
+            <a href="about.html">Hakkımda</a>
+            <a href="contact.html">İletişim</a>
+            <a href="projects.html">Projelerim</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Sayfama Hoş Geldin!</h2>
+            <p>Merhaba, ismim Onur. Yazılım geliştirme ve siber güvenlik alanında ustalaşmak isteyen insanlardan biriyim, her daim kendimi bu alanda geliştirmekten zevk duyarım. Sürekli yeni şeyler öğrenir ve bunları pratiğe dökmekten asla kaçınmam</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Onur Çelik. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <div class="cursor-trail" id="cursorTrail"></div>
+
+    <script>
+        // JavaScript ile İzi Hareket Ettirme
+        const cursorTrail = document.getElementById("cursorTrail");
+
+        document.addEventListener("mousemove", (e) => {
+            cursorTrail.style.transform = `translate(${e.pageX - 10}px, ${e.pageY - 10}px)`;
+        });
+    </script>
+
+</body>
+</html>

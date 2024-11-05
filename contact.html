@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>İletişim</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Genel Stiller */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #ddd;
+            background-color: #111;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: #181818;
+            color: #e63946;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.2rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: #bbb;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        header nav a {
+            color: #f2f2f2;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            background: #333;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        header nav a:hover {
+            background-color: #e63946; /* Kırmızı hover efekti */
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* Ana İçerik */
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 2.2rem;
+            color: #e63946; /* Kırmızı başlık rengi */
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        main p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ddd;
+            margin-bottom: 2rem;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form label {
+            color: #f2f2f2;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        form input, form textarea {
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            background: #222;
+            border: 1px solid #444;
+            color: #f2f2f2;
+            font-size: 1rem;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            transition: border-color 0.3s ease;
+        }
+
+        form input:focus, form textarea:focus {
+            border-color: #e63946;
+            outline: none;
+        }
+
+        form input[type="submit"] {
+            background: #e63946;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        form input[type="submit"]:hover {
+            background: #d32f2f;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #181818;
+            color: #bbb;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+            margin-top: auto;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* İz Efekti */
+        .cursor-trail {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, rgba(230, 57, 70, 0.7), transparent);
+            border-radius: 50%;
+            pointer-events: none;
+            transition: transform 0.1s ease;
+            mix-blend-mode: screen;
+            z-index: 9999;
+        }
+
+        /* Duyarlı Tasarım */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            header nav a {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Anasayfa</a>
+            <a href="about.html">Hakkımda</a>
+            <a href="contact.html">İletişim</a>
+            <a href="projects.html">Projelerim</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>İletişim</h2>
+            <form action="#" method="post">
+                <label for="name">Adınız:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">E-posta Adresiniz:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="message">Mesajınız:</label>
+                <textarea id="message" name="message" required></textarea>
+                <br>
+                <input type="submit" value="Gönder">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Onur Çelik. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <!-- İz Efekti -->
+    <div class="cursor-trail" id="cursorTrail"></div>
+
+    <script>
+        // JavaScript ile İzi Hareket Ettirme
+        const cursorTrail = document.getElementById("cursorTrail");
+
+        document.addEventListener("mousemove", (e) => {
+            cursorTrail.style.transform = `translate(${e.pageX - 10}px, ${e.pageY - 10}px)`;
+        });
+    </script>
+</body>
+</html>
