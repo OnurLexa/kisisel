@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST['message'];
 
     // E-posta bilgileri
-    $to = "onursametcelik2023@gmail.com"; // E-posta alıcısı
+    $to = ""; // E-posta alıcısı
     $subject = "Yeni Mesaj: $name";
     $body = "Ad: $name\nE-posta: $email\nMesaj: $message";
     $headers = "From: $email";
