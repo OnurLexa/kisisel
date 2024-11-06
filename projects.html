@@ -5,7 +5,6 @@
     <title>Projelerim</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* İz Efekti Stili */
         .cursor-trail {
             position: absolute;
             width: 20px;
@@ -31,21 +30,39 @@
     <main>
         <section>
             <h2>Projelerim</h2>
-            <div class="project">
-                <h3>Maskify - HWID Spoofer</h3>
-                <p>Kullanıcıların güvenliğini arttırmak için HWID spoofing teknikleri geliştirdim.</p>
+            <div class="project-category">
+                <h3>Güvenlik Projeleri</h3>
+                <div class="project">
+                    <h4>Maskify - HWID Spoofer</h4>
+                    <p>Kullanıcıların güvenliğini arttırmak için HWID spoofing teknikleri geliştirdim.</p>
+                    <a href="https://github.com/onurlexa/Maskify" target="_blank">Maskify'a ulaşmak için tıkla!</a>
+                </div>
+                <div class="project">
+                    <h4>LogCord</h4>
+                    <p>Büyük bir hevesle hazırladığım LogCord projem, birden fazla dil ile kodlamış olduğum LogCord "Discord" uygulamasında serverinizdaki webhooklara bağlı bir logger uygulamasıdır.</p>
+                    <a href="https://github.com/onurlexa/LogCord" target="_blank">LogCord'a ulaşmak için tıkla!</a>
+                </div>
             </div>
-            <div class="project">
-                <h3>LogCord</h3>
-                <p>Büyük bir hevesle hazırladığım LogCord projem, birden fazla dil ile kodlamış olduğum LogCord "Discord" uygulamasında serverinizdaki webhooklara bağlı bir logger uygulamasıdır.</p>
+            <div class="project-category">
+                <h3>Oyun Projeleri</h3>
+                <div class="project">
+                    <h4>Roxy</h4>
+                    <p>Oyun hileleri ile uğraştığım sıralarda kodlamış olduğum Counter Strike: Source Wall Hack projem, günlerimi almıştı fakat başarılıydı.</p>
+                    <a href="https://github.com/onurlexa/Roxy" target="_blank">Roxy'e ulaşmak için tıkla!</a>
+                </div>
             </div>
-            <div class="project">
-                <h3>Roxy</h3>
-                <p>Oyun hileleri ile uğraştığım sıralarda kodlamış olduğum Counter Strike: Source Wall Hack projem, günlerimi almıştı fakat başarılıydı.</p>                    
-            </div>
-            <div class="project">
-                <h3>Killer</h3>
-                <p>İlk open-source DLL Injector uygulamamdır.</p>
+            <div class="project-category">
+                <h3>Yazılım Araçları</h3>
+                <div class="project">
+                    <h4>Killer</h4>
+                    <p>İlk open-source DLL Injector uygulamamdır.</p>
+                    <a href="https://github.com/onurlexa/Killer" target="_blank">Killer'a ulaşmak için tıkla! Projesi</a>
+                </div>
+                <div class="project">
+                    <h4>WebClone</h4>
+                    <p>Yüksek kaliteli istediğiniz siteyi klonlamak isteyenlerin işine yarayabilecek bir araç.</p>
+                    <a href="https://github.com/onurlexa/WebClone" target="_blank">WebClone'a ulaşmak için tıkla!</a>
+                </div>
             </div>
         </section>
     </main>
@@ -56,14 +73,9 @@
             <a href="https://github.com/lexa1337" target="_blank">GitHub - lexa1337</a>
         </p>
     </footer>
-
-    <!-- İz Efekti için Div -->
     <div class="cursor-trail" id="cursorTrail"></div>
-
     <script>
-        // JavaScript ile İzi Hareket Ettirme
         const cursorTrail = document.getElementById("cursorTrail");
-
         document.addEventListener("mousemove", (e) => {
             cursorTrail.style.transform = `translate(${e.pageX - 10}px, ${e.pageY - 10}px)`;
         });
