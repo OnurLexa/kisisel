@@ -13,6 +13,17 @@ body {
     flex-direction: column;
     min-height: 100vh;
     line-height: 1.6;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* Header */
@@ -34,6 +45,18 @@ header h1 {
     font-weight: bold;
     margin-bottom: 0.2rem;
     letter-spacing: 1px;
+    transition: transform 0.4s ease, color 0.4s ease;
+    opacity: 0;
+    animation: fadeInHeader 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInHeader {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 header p {
@@ -58,12 +81,31 @@ header nav a {
     border-radius: 20px;
     background: #333;
     transition: background 0.3s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 header nav a:hover {
-    background-color: #e63946; /* Kırmızı hover efekti */
+    background-color: #e63946;
     color: #fff;
     transform: scale(1.05);
+}
+
+header nav a::before {
+    content: '';
+    position: absolute;
+    background-color: #e63946;
+    width: 300%;
+    height: 300%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+}
+
+header nav a:hover::before {
+    transform: translate(-50%, -50%) scale(1);
 }
 
 /* Ana İçerik */
@@ -76,71 +118,8 @@ main {
 
 main h2 {
     font-size: 2.2rem;
-    color: #e63946; /* Kırmızı başlık rengi */
+    color: #e63946;
     margin-bottom: 1.5rem;
     font-weight: 600;
-}
-
-main p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #ddd;
-    margin-bottom: 2rem;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-/* Proje Kartları */
-.project {
-    background: #222;
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 15px rgba(230, 57, 70, 0.6);
-}
-
-.project h3 {
-    color: #e63946; /* Kırmızı başlık rengi */
-    margin-bottom: 0.5rem;
-}
-
-.project p {
-    color: #ccc;
-    font-size: 1rem;
-}
-
-/* Footer */
-footer {
-    background-color: #181818;
-    color: #bbb;
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    margin-top: auto;
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Duyarlı Tasarım */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    main {
-        padding: 1rem;
-    }
-    
-    header nav a {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.9rem;
-    }
-}
+    opacity: 0;
+    animation: slideIn 1s
